@@ -1,0 +1,42 @@
+{
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "js/content.js"
+      ],
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "description": "youtube autoClose ads and open new tab",
+  "icons": {
+    "128": "resources/fish.jpg",
+    "16": "resources/fish.jpg",
+    "48": "resources/fish.jpg"
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "resources/fish.jpg",
+      "16": "resources/fish.jpg",
+      "48": "resources/fish.jpg"
+    },
+    "default_title": "youtube autoClose ads",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "name": "youtube_autoClose_ads",
+  "options_ui": {
+    "browser_style": true,
+    "open_in_tab": false,
+    "page": "options.html"
+  },
+  "permissions": [
+    "declarativeContent",
+    "contextMenus",
+    "storage"
+  ],
+  "version": "1.0.0"
+}
